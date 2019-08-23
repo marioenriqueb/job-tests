@@ -1,4 +1,4 @@
-package examples;
+package com.counter;
 
 import org.junit.Assert;
 

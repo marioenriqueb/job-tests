@@ -1,4 +1,4 @@
-package examples;
+package com.counter;
 import java.util.TreeSet;
 
 import org.junit.Assert;
