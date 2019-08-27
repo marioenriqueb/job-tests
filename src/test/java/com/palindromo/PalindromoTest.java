@@ -13,7 +13,28 @@ public class PalindromoTest {
     }
 
     @Test
-    public void test() {
+    public void testCheck() {
+        String cadeia = "holaaloh";
+        System.out.println(cadeia + ": " + this.palindromo.check(cadeia));
+
+        cadeia = "holachau";
+        System.out.println(cadeia + ": " + this.palindromo.check(cadeia));
+
+        cadeia = "abcdeedcba";
+        System.out.println(cadeia + ": " + this.palindromo.check(cadeia));
+
+        cadeia = "abcde";
+        System.out.println(cadeia + ": " + this.palindromo.check(cadeia));
+
+        cadeia = "123456789987654321";
+        System.out.println(cadeia + ": " + this.palindromo.check(cadeia));
+
+        cadeia = "12345678987654321";
+        System.out.println(cadeia + ": " + this.palindromo.check(cadeia));
+    }
+
+    @Test
+    public void testPalindromos() {
         String cadeia = "holaaloh";
         System.out.println(cadeia + ": " + this.palindromo.check(cadeia));
 
