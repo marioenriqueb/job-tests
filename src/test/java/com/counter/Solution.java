@@ -2,6 +2,9 @@ package com.counter;
 
 import org.junit.Assert;
 
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 public class Solution {
 
 	public static void main(String[] args) {
@@ -28,23 +31,14 @@ public class Solution {
 
 	public static int solution(int[] A) {
 
-		int counter = 1;
-
 		int[] arreglo = new int[1000001];
 
-		for (int element : A) {
-			if (element > 0) {
-				arreglo[element] = element;
-			}
-		}
+		Arrays.stream(A).map(element -> arreglo[element] = element);
 
-		for (int index = 1; index < arreglo.length; index++) {
-			if (arreglo[index] != index) {
-				return index;
-			}
-		}
-		
-		return counter;
+		return IntStream
+				.range(0, arreglo.length)
+				.filter(index -> arreglo[index] == index)
+				.findFirst().orElse(0);
 	}
 
 }

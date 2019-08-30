@@ -4,7 +4,7 @@ import java.util.stream.IntStream;
 
 public class Palindromo {
 
-    public long checkPalindromos(Integer x, Integer y) {
+    public long checkPalindromos(int x, int y) {
         return IntStream.range(x, y).filter(n -> check(String.valueOf(n))).count();
     }
 
@@ -17,12 +17,7 @@ public class Palindromo {
     * */
 
     public Boolean check(String value) {
-
         value = value.trim();
-
-        if (value.isEmpty() || value.length() % 2 > 0) {
-            return Boolean.FALSE;
-        }
 
         String temp  = value.trim().toLowerCase();
         return IntStream.range(0, temp.length() / 2)
